@@ -1,21 +1,33 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: ['./src/index.js'],
-  mode: 'development',
+  mode: 'production',
   output: {
-    filename: '[name].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
+    new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './public',
+          to: '.',
+          globOptions: {
+            ignore: ['**/index.html'],
+          },
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new ReactRefreshWebpackPlugin(),
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
@@ -28,7 +40,6 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               cacheDirectory: true,
-              plugins: ['react-refresh/babel'],
             },
           },
         ],
@@ -36,29 +47,34 @@ module.exports = {
       {
         test: /\.(sc|c)ss$/i,
         use: [
-          'style-loader',
+          // 'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
               url: false,
               modules: {
                 auto: /\.scss$/i,
-                localIdentName: '[name]__[local]--[hash:base64:5]',
+                localIdentName: '[local]--[hash:base64:5]',
               },
             },
           },
-          // 'postcss-loader', // needed if using preset-env
+          'postcss-loader',
           'sass-loader',
         ],
       },
     ],
   },
-  optimization: {},
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: ['./dist', './public'],
-    host: '0.0.0.0',
-    hot: true,
-    port: 3000,
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+    moduleIds: 'deterministic',
   },
 };
