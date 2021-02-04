@@ -16,7 +16,14 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
   },
   optimization: {},
   devtool: 'inline-source-map',
