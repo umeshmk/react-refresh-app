@@ -1,0 +1,21 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  // linting errors
+  "files.associations": {
+    // "*.css": "scss"
+  },
+  // "css.validate": false,
+  // "less.validate": false,
+  // "scss.validate": false
+
+  // "bracket-pair-colorizer-2.colors": ["Red", "#333", "Blue"],
+
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll": false,
+  //   "source.fixAll.eslint": false
+  // }
+}

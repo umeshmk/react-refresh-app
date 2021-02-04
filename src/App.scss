@@ -1,0 +1,27 @@
+.container {
+  background-color: #222;
+  padding: 2rem;
+  text-align: center;
+
+  & h1 {
+    color: skyblue;
+    text-transform: uppercase;
+    font-family: monospace;
+  }
+  & h3 {
+    color: #999;
+    text-transform: capitalize;
+    font-weight: 300;
+  }
+  & img {
+    max-width: 20rem;
+  }
+  @media (max-width: 900px) {
+    & img {
+      max-width: 10rem;
+    }
+    & h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

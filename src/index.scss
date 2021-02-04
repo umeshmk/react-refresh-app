@@ -1,0 +1,14 @@
+:root {
+  --bgColor: #333;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bgColor);
+  display: flex;
+  justify-content: center;
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+}
