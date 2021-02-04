@@ -6,11 +6,11 @@ const App = () => {
   return (
     <div>
       <div className={Styles.container}>
-        <div className="flex justify-center">
+        <div>
           <img src="img/logo512.png" alt="Logo react" />
         </div>
         <div>
-          <h1>Reactoo From Scratch</h1>
+          <h1>React From Scratch</h1>
           <h3>
             Use this project as your starting point for any react projects.
           </h3>

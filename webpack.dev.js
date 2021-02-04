@@ -21,7 +21,32 @@ module.exports = {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(sc|c)ss$/i,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+              modules: {
+                auto: /\.scss$/i,
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
+            },
+          },
+          // 'postcss-loader', // needed if using preset-env
+          'sass-loader',
+        ],
       },
     ],
   },
@@ -29,7 +54,8 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     // contentBase: path.join(__dirname, 'public'),
-    contentBase: './dist',
+    // contentBase: './dist',
+    contentBase: ['./dist', './public'],
     host: '0.0.0.0',
     // hot: true,
     port: 3000,
