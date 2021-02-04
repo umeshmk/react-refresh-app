@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
   entry: ['./src/index.js'],
@@ -14,13 +15,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
+    new ReactRefreshWebpackPlugin(),
   ],
   module: {
     rules: [
       {
-        test: /\.js$/,
-        include: path.resolve(__dirname, 'src'),
+        test: /\.[jt]sx?$/,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: [
           {
             loader: 'babel-loader',
@@ -53,11 +55,9 @@ module.exports = {
   optimization: {},
   devtool: 'inline-source-map',
   devServer: {
-    // contentBase: path.join(__dirname, 'public'),
-    // contentBase: './dist',
     contentBase: ['./dist', './public'],
     host: '0.0.0.0',
-    // hot: true,
+    hot: true,
     port: 3000,
   },
 };
