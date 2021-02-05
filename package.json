@@ -1,14 +1,14 @@
 {
-  "name": "react-refresh",
+  "name": "react-refresh-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Use This Project As Your Starting Point For Any React Projects.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --config webpack.dev.js",
     "prod": "cross-env NODE_ENV=production webpack --config ./webpack.prod.js --progress"
   },
   "keywords": [],
-  "author": "",
+  "author": "Umesh Kadam",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.13",

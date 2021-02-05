@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import './styles/sanitize.css';
 import './index.scss';
+
 
 import App from './App';
 
