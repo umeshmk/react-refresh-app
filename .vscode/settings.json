@@ -14,14 +14,14 @@
 
   // For autocompletions
   "files.associations": {
-    "*.css": "scss", // For nested css
-    "*.js": "javascriptreact"
+    "*.css": "scss" // For nested css
+    // "*.js": "javascriptreact"
   },
 
   // correct icons for "vscode-icons"
   "vsicons.associations.files": [
-    {"icon": "css", "extensions": ["css"]},
-    {"icon": "js", "extensions": ["js"]}
+    {"icon": "css", "extensions": ["css"]}
+    // {"icon": "js", "extensions": ["js"]}
   ],
 
   // autofix
