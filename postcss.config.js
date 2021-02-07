@@ -1,22 +1,22 @@
-const postcssImport = require('postcss-import');
-const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
-
-let purgecss = require('@fullhuman/postcss-purgecss');
-
-purgecss = purgecss({
-  content: ['./public/index.html', './src/**/*.html', './src/**/*.js'],
-});
-
 const presetEnv = require('postcss-preset-env')({
   stage: 1,
   features: {},
 });
 
+const purgecss = require('@fullhuman/postcss-purgecss')({
+  content: ['./public/index.html', './src/**/*.html', './src/**/*.js'],
+});
+
+const cssnano = require('cssnano')({
+  preset: 'default',
+});
+
 module.exports = {
   plugins: [
-    postcssImport,
+    require('postcss-import'),
     presetEnv,
-    postcssFlexbugsFixes,
+    require('postcss-flexbugs-fixes'),
     ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
+    ...(process.env.NODE_ENV === 'production' ? [cssnano] : []),
   ],
 };
