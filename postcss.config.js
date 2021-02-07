@@ -1,4 +1,3 @@
-const autoprefixer = require('autoprefixer');
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 
 let purgecss = require('@fullhuman/postcss-purgecss');
@@ -17,6 +16,5 @@ module.exports = {
     presetEnv,
     postcssFlexbugsFixes,
     ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
-    ...(process.env.NODE_ENV === 'production' ? [autoprefixer] : []),
   ],
 };
