@@ -11,6 +11,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: '[path][name][ext]',
   },
+
+  /*=====  plugins  ======*/
   plugins: [
     new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
     new HtmlWebpackPlugin({
@@ -18,9 +20,11 @@ module.exports = {
     }),
     new ReactRefreshWebpackPlugin(),
   ],
+
+  /*=====  modules  ======*/
   module: {
     rules: [
-      //---- javascript
+      /*----------  javascript  ----------*/
       {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,
@@ -36,7 +40,7 @@ module.exports = {
         ],
       },
 
-      //---- Scoped css
+      /*----------  Scoped css  ----------*/
       {
         test: /\.css$/,
         include: [path.resolve(__dirname, 'src/components')],
@@ -56,7 +60,7 @@ module.exports = {
         ],
       },
 
-      //---- UnScoped css (eg: src/index.css, styles/tailwindcss.css)
+      /*---------- UnScoped css (eg: src/index.css, styles/tailwindcss.css)    ----------*/
       {
         test: /\.css$/,
         include: [path.resolve(__dirname, 'src')],
@@ -72,6 +76,8 @@ module.exports = {
       },
     ],
   },
+
+  /*=====  Optimizations & Devserver  ======*/
   optimization: {},
   devtool: 'inline-source-map',
   devServer: {

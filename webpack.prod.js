@@ -12,6 +12,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'images/[name]-[hash:5][ext]',
   },
+
+  /*=====  plugins  ======*/
   plugins: [
     new CleanWebpackPlugin(),
     new CopyPlugin({
@@ -32,9 +34,11 @@ module.exports = {
       filename: '[name].[hash:5].min.css',
     }),
   ],
+
+  /*=====  modules  ======*/
   module: {
     rules: [
-      //---- javascript
+      /*----------  javascript  ----------*/
       {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,
@@ -49,7 +53,7 @@ module.exports = {
         ],
       },
 
-      //---- Scoped css
+      /*----------  Scoped css  ----------*/
       {
         test: /\.css$/i,
         include: [path.resolve(__dirname, 'src/components')],
@@ -69,17 +73,12 @@ module.exports = {
         ],
       },
 
-      //---- UnScoped css (eg: src/index.css, styles/tailwindcss.css)
+      /*---------- UnScoped css (eg: src/index.css, styles/tailwindcss.css)    ----------*/
       {
         test: /\.css$/,
         include: [path.resolve(__dirname, 'src')],
         exclude: [path.resolve(__dirname, 'src/components')],
-        use: [
-          // 'style-loader',
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
 
       /*---------- Assets in .js (In webpack 5 file-loader is deprecated. )   ----------*/
@@ -90,6 +89,8 @@ module.exports = {
       },
     ],
   },
+
+  /*=====  Optimizations  ======*/
   optimization: {
     splitChunks: {
       cacheGroups: {
