@@ -51,7 +51,6 @@ module.exports = {
         test: /\.css$/i,
         include: [path.resolve(__dirname, 'src/components')],
         use: [
-          // 'style-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -72,7 +71,12 @@ module.exports = {
         test: /\.css$/,
         include: [path.resolve(__dirname, 'src')],
         exclude: [path.resolve(__dirname, 'src/components')],
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: [
+          // 'style-loader',
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ],
       },
     ],
   },

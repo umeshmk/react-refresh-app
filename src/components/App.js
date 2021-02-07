@@ -7,7 +7,7 @@ const App = () => {
     <div>
       <div className={Styles.container}>
         <div>
-          <img src="img/logo512.png" alt="Logo react" />
+          <img src="images/logo512.png" alt="Logo react" />
         </div>
         <div>
           <h1>React Refresh App</h1>
