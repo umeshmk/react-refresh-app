@@ -1,21 +1,32 @@
 {
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
+
+  // Emmet for react
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  // linting errors
+
+  // For stylelint - disable default linters
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  // For autocompletions
   "files.associations": {
-    // "*.css": "scss"
+    "*.css": "scss", // For nested css
+    "*.js": "javascriptreact"
   },
-  // "css.validate": false,
-  // "less.validate": false,
-  // "scss.validate": false
 
-  // "bracket-pair-colorizer-2.colors": ["Red", "#333", "Blue"],
+  // correct icons for "vscode-icons"
+  "vsicons.associations.files": [
+    {"icon": "css", "extensions": ["css"]},
+    {"icon": "js", "extensions": ["js"]}
+  ],
 
-  // "editor.codeActionsOnSave": {
-  //   "source.fixAll": false,
-  //   "source.fixAll.eslint": false
-  // }
+  // autofix
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.eslint": false,
+    "source.fixAll.stylelint": true
+  }
 }

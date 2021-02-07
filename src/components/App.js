@@ -1,6 +1,6 @@
 import React from 'react';
-import Styles from './App.scss';
-import Footer from './components/Footer';
+import Styles from './App.css';
+import Footer from './Footer/Footer';
 
 const App = () => {
   return (

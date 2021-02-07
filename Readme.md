@@ -11,14 +11,14 @@
 1. React 17+
 2. Webpack 5 + _React-refresh HMR_
 3. Separate configurations `webpack.dev.js` & `webpack.prod.js`
-4. Sass
+4. Css with _Stylelint_ support
 5. Sanitize.css
-6. Postcss - `autoprefixer, purgecss`
+6. Postcss - `preset-env, autoprefixer, purgecss`
 7. Faster subsequent builds due to cached _babel_ transpiling output.
 
 **Production ready**
 
-1. Javascript files - _Minified & split chunks as `main.[hash].js` & `vendors.[hash].js`_
+1. Javascript files - _Minified & split chunks as `main.[hash].min.js` & `vendors.[hash].min.js`_
 2. `main.css`
    - Scss files - _Scoped classes + Prefixed + Purged + Minified_
    - Css files [libraries] - _Prefixed + Purged + Minified_
@@ -34,23 +34,81 @@ npm run dev   # development - uses webpack.dev.js
 npm run prod  # production - uses webpack.prod.js
 ```
 
-- Enable `postcss-loader` in `webpack.dev.js` if using `postcss-preset-env` plugin.
 
-### Add Tailwindcss
+### Visual studio code
 
-_Vscode extensions (optional)_
+_This Project comes with some minor tweaks & recommendations for better developer experience_.
+
+**`.vscode/settings.json`**
+
+```json
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+
+  // Emmet for react
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  // For stylelint - disable default linters
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  // For autocompletions
+  "files.associations": {
+    "*.css": "scss", // For nested css
+    "*.js": "javascriptreact"
+  },
+
+  // correct icons for "vscode-icons"
+  "vsicons.associations.files": [
+    {"icon": "css", "extensions": ["css"]},
+    {"icon": "js", "extensions": ["js"]}
+  ],
+
+  // autofix
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.eslint": false,
+    "source.fixAll.stylelint": true
+  }
+}
+```
+
+**`.stylelintrc.json`**
+
+- Needs [stylelint.vscode-stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) vscode extension
+- Needs postcss plugin [postcss-sorting](https://github.com/hudochenkov/postcss-sorting).
+- Is extended from predefined configs like [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) & [stylelint-config-rational-order](https://github.com/constverum/stylelint-config-rational-order)
+
+```bash
+# Already installed
+npm i -D  stylelint stylelint-config-standard
+npm i -D  stylelint-order stylelint-config-rational-order postcss-sorting
+```
+
+```json
+// Refer ./.stylelintrc.json
+  "extends": ["stylelint-config-standard", "stylelint-config-rational-order"],
+  "prettier.stylelintIntegration": true,
+```
+
+### Add Tailwindcss (optional)
+
+**_Vscode extensions (optional)_**
 
 - _Tailwindcss intellisense_
 - _Headwind_
 
-_install_
+**_install_**
 
 ```bash
 npm i tailwindcss
 npx tailwindcss init --full
 ```
 
-_postcss.config.js_
+**_postcss.config.js_**
 
 - If using `postcss-preset-env` refer this [issue](https://github.com/tailwindlabs/tailwindcss/discussions/2462#discussioncomment-86591) for error solution.
 
@@ -63,7 +121,7 @@ plugins: [
 ];
 ```
 
-_package.json_
+**_package.json_**
 
 - Run script - `npm run build:css`
 
@@ -73,7 +131,7 @@ script:{
 }
 ```
 
-_Create `./src/style/_tailwind.css`_
+**_Create `./src/style/_tailwind.css`_**
 
 ```css
 @tailwind base;
@@ -81,7 +139,7 @@ _Create `./src/style/_tailwind.css`_
 @tailwind utilities;
 ```
 
-_index.js_
+**_index.js_**
 
 ```js
 // import './styles/sanitize.css';  // remove this if using @tailwind base

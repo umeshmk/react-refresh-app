@@ -8,7 +8,7 @@ module.exports = {
   entry: ['./src/index.js'],
   mode: 'production',
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].[contenthash].min.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
@@ -31,6 +31,7 @@ module.exports = {
   ],
   module: {
     rules: [
+      //---- javascript
       {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,
@@ -44,8 +45,11 @@ module.exports = {
           },
         ],
       },
+
+      //---- Scoped css
       {
-        test: /\.(sc|c)ss$/i,
+        test: /\.css$/i,
+        include: [path.resolve(__dirname, 'src/components')],
         use: [
           // 'style-loader',
           MiniCssExtractPlugin.loader,
@@ -54,14 +58,21 @@ module.exports = {
             options: {
               url: false,
               modules: {
-                auto: /\.scss$/i,
-                localIdentName: '[local]--[hash:base64:5]',
+                localIdentContext: path.resolve(__dirname, 'src/components'),
+                localIdentName: '[hash:base64:6]',
               },
             },
           },
           'postcss-loader',
-          'sass-loader',
         ],
+      },
+
+      //---- UnScoped css (eg: src/index.css, styles/tailwindcss.css)
+      {
+        test: /\.css$/,
+        include: [path.resolve(__dirname, 'src')],
+        exclude: [path.resolve(__dirname, 'src/components')],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   },

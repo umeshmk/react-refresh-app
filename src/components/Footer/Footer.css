@@ -1,0 +1,15 @@
+@custom-media --md (width >= 640px);
+
+@custom-selector :--heading h1, h2, h3;
+
+.footer {
+  margin-top: 3rem;
+  color: aquamarine;
+  text-align: center;
+
+  & a {
+    padding-bottom: 0;
+    color: aquamarine;
+    color: #aaa;
+  }
+}

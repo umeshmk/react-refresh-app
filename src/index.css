@@ -3,17 +3,23 @@
 }
 
 body {
-  min-height: 100vh;
-  background-color: var(--bgColor);
   display: flex;
   justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bgColor);
+
   & > div {
     display: flex;
     align-items: center;
   }
 }
+
 @media (max-width: 900px) {
   body {
-    padding: 3rem 0rem;
+    padding: 3rem 0;
   }
+}
+
+.foo {
+  color: red;
 }
