@@ -8,7 +8,7 @@ module.exports = {
   entry: ['./src/index.js'],
   mode: 'production',
   output: {
-    filename: '[name].[contenthash].min.js',
+    filename: '[name].[contenthash:5].min.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
@@ -27,7 +27,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash:5].min.css',
+    }),
   ],
   module: {
     rules: [
@@ -58,7 +60,7 @@ module.exports = {
               url: false,
               modules: {
                 localIdentContext: path.resolve(__dirname, 'src/components'),
-                localIdentName: '[hash:base64:6]',
+                localIdentName: '[hash:6]',
               },
             },
           },
