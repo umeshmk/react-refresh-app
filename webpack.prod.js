@@ -10,6 +10,7 @@ module.exports = {
   output: {
     filename: '[name].[contenthash:5].min.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[name]-[hash:5][ext]',
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -79,6 +80,13 @@ module.exports = {
           'css-loader',
           'postcss-loader',
         ],
+      },
+
+      /*---------- Assets in .js (In webpack 5 file-loader is deprecated. )   ----------*/
+      //---- https://webpack.js.org/guides/asset-modules/
+      {
+        test: /\.(png|jpg|jpeg|webp|gif|svg)$/i,
+        type: 'asset/resource',
       },
     ],
   },

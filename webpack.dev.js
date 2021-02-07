@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: '[path][name][ext]',
   },
   plugins: [
     new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
@@ -61,6 +62,13 @@ module.exports = {
         include: [path.resolve(__dirname, 'src')],
         exclude: [path.resolve(__dirname, 'src/components')],
         use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+
+      /*---------- Assets in .js (In webpack 5 file-loader is deprecated. )   ----------*/
+      //---- https://webpack.js.org/guides/asset-modules/
+      {
+        test: /\.(png|jpg|jpeg|webp|gif|svg)$/i,
+        type: 'asset/resource',
       },
     ],
   },
