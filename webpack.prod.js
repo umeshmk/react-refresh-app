@@ -1,14 +1,12 @@
 const {merge} = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
-  /*=====  plugins  ======*/
   plugins: [
     new CleanWebpackPlugin(),
     new CopyPlugin({
@@ -30,62 +28,6 @@ module.exports = merge(common, {
     }),
   ],
 
-  /*=====  modules  ======*/
-  module: {
-    rules: [
-      /*----------  javascript  ----------*/
-      {
-        test: /\.[jt]sx?$/,
-        exclude: /node_modules/,
-        include: path.resolve(__dirname, 'src'),
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
-            },
-          },
-        ],
-      },
-
-      /*----------  Scoped css  ----------*/
-      {
-        test: /\.css$/i,
-        include: [path.resolve(__dirname, 'src/components')],
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              url: false,
-              modules: {
-                localIdentContext: path.resolve(__dirname, 'src/components'),
-                localIdentName: '[hash:6]',
-              },
-            },
-          },
-          'postcss-loader',
-        ],
-      },
-
-      /*---------- UnScoped css (eg: src/index.css, styles/tailwindcss.css)    ----------*/
-      {
-        test: /\.css$/,
-        include: [path.resolve(__dirname, 'src')],
-        exclude: [path.resolve(__dirname, 'src/components')],
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
-      },
-
-      /*---------- Assets in .js (In webpack 5 file-loader is deprecated. )   ----------*/
-      //---- https://webpack.js.org/guides/asset-modules/
-      {
-        test: /\.(png|jpg|jpeg|webp|gif|svg)$/i,
-        type: 'asset/resource',
-      },
-    ],
-  },
-
-  /*=====  Optimizations  ======*/
   optimization: {
     splitChunks: {
       cacheGroups: {

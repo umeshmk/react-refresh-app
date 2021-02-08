@@ -1,3 +1,4 @@
+const isProduction = process.env.NODE_ENV === 'production';
 const presetEnv = require('postcss-preset-env')({
   stage: 1,
   features: {},
@@ -16,7 +17,7 @@ module.exports = {
     require('postcss-import'),
     presetEnv,
     require('postcss-flexbugs-fixes'),
-    ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
-    ...(process.env.NODE_ENV === 'production' ? [cssnano] : []),
+    ...(isProduction ? [purgecss] : []),
+    ...(isProduction ? [cssnano] : []),
   ],
 };
