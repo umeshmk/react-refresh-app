@@ -28,6 +28,8 @@ module.exports = merge(common, {
     }),
   ],
 
+  devtool: 'source-map',
+
   optimization: {
     splitChunks: {
       cacheGroups: {

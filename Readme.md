@@ -1,6 +1,7 @@
-<!-- ![](https://i.imgur.com/msARAdu.png) -->
+<!-- ![alt](https://i.imgur.com/VLGNErN.png)
+![alt](https://i.imgur.com/nkaS868.png) -->
 
-![alt](https://i.imgur.com/VLGNErN.png)
+![](https://i.imgur.com/mrHwrbH.png)
 
 # REACT REFRESH APP
 
@@ -13,17 +14,21 @@
 3. Separate configurations `webpack.dev.js` & `webpack.prod.js`
 4. Css with _Stylelint_ support
 5. Sanitize.css
-6. Postcss - `preset-env, autoprefixer, purgecss`
-7. Faster subsequent builds due to cached _babel_ transpiling output.
+6. Postcss - `import, preset-env, purgecss, cssnano`
+7. Assets (`png|jpg|jpeg|webp|gif|svg`)
+   - `src` - add using `import Logo as "./logo.png";`
+   - `public/images` - add using `<img src="images/logo.png" />`
+8. Faster subsequent builds due to cached _babel_ transpiling output.
 
 **Production ready**
 
-1. Javascript files - _Minified & split chunks as `main.[hash].min.js` & `vendors.[hash].min.js`_
-2. `main.css`
-   - Scss files - _Scoped classes + Prefixed + Purged + Minified_
-   - Css files [libraries] - _Prefixed + Purged + Minified_
+1. `*.js` - _Minified & split chunks as `main.[hash].min.js` & `vendors.[hash].min.js`_
+2. `main.[hash].min.css` is _Prefixed, Purged & Minified_
+   - `src/*.css` - _UnScoped classes_. Good for libraries like Tailwindcss.
+   - `src/components/*.css` - _scoped classes_.
 3. `public` folder is copied to `dist`
-4. `public/index.html` - _Scripts/Stylesheets are automatically added._
+4. `index.html` - _Scripts/Stylesheets are automatically added._
+5. Assets are stored in `dist/images`
 
 ### Install
 
@@ -34,6 +39,25 @@ npm run dev   # development - uses webpack.dev.js
 npm run prod  # production - uses webpack.prod.js
 ```
 
+### Stylelint
+
+`.stylelintrc.json`
+
+- Needs [stylelint.vscode-stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) vscode extension
+- Uses postcss plugin [postcss-sorting](https://github.com/hudochenkov/postcss-sorting) (not in `postcss.config.js`).
+- Is extended from predefined configs - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) & [stylelint-config-rational-order](https://github.com/constverum/stylelint-config-rational-order)
+
+```bash
+# Already installed
+npm i -D  stylelint stylelint-config-standard
+npm i -D  stylelint-order stylelint-config-rational-order postcss-sorting
+```
+
+```js
+// Refer ./.stylelintrc.json
+  "extends": ["stylelint-config-standard", "stylelint-config-rational-order"],
+  "prettier.stylelintIntegration": true,
+```
 
 ### Visual studio code
 
@@ -41,7 +65,7 @@ _This Project comes with some minor tweaks & recommendations for better develope
 
 **`.vscode/settings.json`**
 
-```json
+```js
 {
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
@@ -59,39 +83,18 @@ _This Project comes with some minor tweaks & recommendations for better develope
   // For autocompletions
   "files.associations": {
     "*.css": "scss", // For nested css
-    "*.js": "javascriptreact"
   },
 
   // correct icons for "vscode-icons"
   "vsicons.associations.files": [
     {"icon": "css", "extensions": ["css"]},
-    {"icon": "js", "extensions": ["js"]}
   ],
 
   // autofix
   "editor.codeActionsOnSave": {
-    // "source.fixAll.eslint": false,
     "source.fixAll.stylelint": true
   }
 }
-```
-
-**`.stylelintrc.json`**
-
-- Needs [stylelint.vscode-stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) vscode extension
-- Needs postcss plugin [postcss-sorting](https://github.com/hudochenkov/postcss-sorting).
-- Is extended from predefined configs like [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) & [stylelint-config-rational-order](https://github.com/constverum/stylelint-config-rational-order)
-
-```bash
-# Already installed
-npm i -D  stylelint stylelint-config-standard
-npm i -D  stylelint-order stylelint-config-rational-order postcss-sorting
-```
-
-```json
-// Refer ./.stylelintrc.json
-  "extends": ["stylelint-config-standard", "stylelint-config-rational-order"],
-  "prettier.stylelintIntegration": true,
 ```
 
 ### Add Tailwindcss (optional)
