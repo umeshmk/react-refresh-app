@@ -16,7 +16,12 @@
   }
 
   & img {
-    max-width: 20rem;
+    max-width: 16rem;
+  }
+
+  & input {
+    margin-top: 2rem;
+    background-color: white;
   }
 
   @media (max-width: 900px) {
