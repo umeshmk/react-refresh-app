@@ -6,7 +6,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = merge(common, {
-  target: 'web', // needed for issue https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/235
+  target: 'web', // issue - https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/235
 
   plugins: [
     new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),

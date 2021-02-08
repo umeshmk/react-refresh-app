@@ -15,7 +15,7 @@
 4. Css with _Stylelint_ support
 5. Sanitize.css
 6. Postcss - `import, preset-env, purgecss, cssnano`
-7. Assets (`png|jpg|jpeg|webp|gif|svg`)
+7. Assets (`/\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i`)
    - `src` - add using `import Logo as "./logo.png";`
    - `public/images` - add using `<img src="images/logo.png" />`
 8. Faster subsequent builds due to cached _babel_ transpiling output.

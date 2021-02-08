@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Styles from './App.css';
-import Logo from './logo512.png';
+import Logo from './logo.png';
 
 import Footer from './Footer/Footer';
 

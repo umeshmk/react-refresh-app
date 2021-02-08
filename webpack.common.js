@@ -3,12 +3,18 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
+const handleUrlInCss = (url, resourcePath) => {
+  if (url.startsWith('/')) return false;
+  return true;
+};
+
 module.exports = {
   entry: ['./src/index.js'],
   mode: isProduction ? 'production' : 'development',
   output: {
     filename: isProduction ? '[name].[hash:5].min.js' : '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '', // issue https://bit.ly/3cPweLu
     assetModuleFilename: isProduction
       ? 'images/[name]-[hash:5][ext]'
       : '[path][name][ext]',
@@ -41,7 +47,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false,
+              url: handleUrlInCss,
               modules: {
                 localIdentContext: path.resolve(__dirname, 'src/components'),
                 localIdentName: isProduction
@@ -61,16 +67,28 @@ module.exports = {
         exclude: [path.resolve(__dirname, 'src/components')],
         use: [
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: handleUrlInCss,
+            },
+          },
           'postcss-loader',
         ],
       },
 
-      /*---------- Assets in .js for webpack 5  ----------*/
+      /*---------- Assets  ----------*/
       {
-        test: /\.(png|jpg|jpeg|webp|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
         type: 'asset/resource',
       },
     ],
   },
+
+  // /*----------  resolve  ----------*/
+  // resolve: {
+  //   alias: {
+  //     foo: path.resolve(__dirname, 'bar/'),
+  //   },
+  // },
 };
