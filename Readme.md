@@ -30,6 +30,19 @@
 4. `index.html` - _Scripts/Stylesheets are automatically added._
 5. Assets are stored in `dist/images`
 
+**Assets is css `url()`**
+All assets are `resolved` by Webpack except urls which **`url.startsWith('/')`** which will point to root directory.
+
+- In _development_ root is `['dist', 'public']`
+- In _production_ root is `'dist'`
+
+```scss
+// We can put images in public folder.
+// Webpack will copy everything in public to dist automatically
+url(/images/foo.png) --->  "public/images/foo.png" // development
+url(/images/foo.png) --->  "dist/images/foo.png" // production
+```
+
 ### Install
 
 ```bash
