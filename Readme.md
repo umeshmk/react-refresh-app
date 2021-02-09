@@ -167,18 +167,9 @@ import './index.scss';
 
 _Create an issue for todos, bugs, feature requests, and more._
 
-**css-loader**
-
-```js
-// webpack - In css-loader options
-options: {
-  url: false, // put images in ./public/img or explore 'resolve-url-loader'
-  modules: {
-    auto: /\.scss$/i, // scoped css only for .scss files not .css
-  },
-},
-```
+- _Prefer `postcss-import` for `@import` instead of `css-loader` resolving it because it goes through postcss chain(prefixing & purging)._
+- _Prefer `cssnano` in postcss & avoid `css-minimizer-webpack-plugin` since it uses the same `cssnano`._
 
 ## Inspired from
 
-- _Create-React-App_
+- [_Create-React-App_](https://github.com/facebook/create-react-app)
