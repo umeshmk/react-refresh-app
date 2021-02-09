@@ -24,11 +24,11 @@ module.exports = merge(common, {
       template: './public/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash:5].min.css',
+      filename: '[name].[contenthash:5].min.css',
     }),
   ],
 
-  devtool: 'source-map',
+  // devtool: 'source-map',
 
   optimization: {
     splitChunks: {

@@ -12,11 +12,11 @@ module.exports = {
   entry: ['./src/index.js'],
   mode: isProduction ? 'production' : 'development',
   output: {
-    filename: isProduction ? '[name].[hash:5].min.js' : '[name].js',
+    filename: isProduction ? '[name].[contenthash:5].min.js' : '[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '', // issue https://bit.ly/3cPweLu
     assetModuleFilename: isProduction
-      ? 'images/[name]-[hash:5][ext]'
+      ? 'images/[name]-[contenthash:5][ext]'
       : '[path][name][ext]',
   },
   module: {
@@ -51,7 +51,7 @@ module.exports = {
               modules: {
                 localIdentContext: path.resolve(__dirname, 'src/components'),
                 localIdentName: isProduction
-                  ? '[hash:6]'
+                  ? '[contenthash:6]'
                   : '[path][name]__[local]',
               },
             },
