@@ -4,7 +4,7 @@
 
   // Emmet for react
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact" // provides html in jsx
   },
 
   // For stylelint - disable default linters
@@ -14,13 +14,13 @@
 
   // For autocompletions
   "files.associations": {
-    "*.css": "scss" // For nested css
+    // "*.css": "scss" // not needed since using custom snippets
     // "*.js": "javascriptreact"
   },
 
   // correct icons for "vscode-icons"
   "vsicons.associations.files": [
-    {"icon": "css", "extensions": ["css"]}
+    {"icon": "css", "extensions": ["css"]} // if using postcss recommended extension
     // {"icon": "js", "extensions": ["js"]}
   ],
 

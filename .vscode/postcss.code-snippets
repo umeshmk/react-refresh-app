@@ -1,0 +1,2709 @@
+// Gist - https://gist.github.com/umeshmk/41dc6e4f153c617db821d5cff83a58bd
+{
+  "@f": {
+    "scope": "css,postcss,scss",
+    "prefix": "@font-face {\n\tfont-family: ;\n\tsrc: url();\n}",
+    "body": "@font-face {\n\tfont-family: ${1};\n\tsrc: url(${1});\n};"
+  },
+  "@ff": {
+    "scope": "css,postcss,scss",
+    "prefix": "@font-face {\n\tfont-family: ' FontName';\n\tsrc: url(' FontName.eot');\n\tsrc: url(' FontName.eot?#iefix') format('embedded-opentype'),\n\t\t url(' FontName.woff') format('woff'),\n\t\t url(' FontName.ttf') format('truetype'),\n\t\t url(' FontName.svg# FontName') format('svg');\n\tfont-style: FontName;\n\tfont-weight: FontName;\n}",
+    "body": "@font-face {\n\tfont-family: '${1:FontName}';\n\tsrc: url('${2:FileName}.eot');\n\tsrc: url('${2:FileName}.eot?#iefix') format('embedded-opentype'),\n\t\t url('${2:FileName}.woff') format('woff'),\n\t\t url('${2:FileName}.ttf') format('truetype'),\n\t\t url('${2:FileName}.svg#${1:FontName}') format('svg');\n\tfont-style: ${3:normal};\n\tfont-weight: ${4:normal};\n};"
+  },
+  "@i|@import": {
+    "scope": "css,postcss,scss",
+    "prefix": "@import url();",
+    "body": "@import url(${0});"
+  },
+  "@kf": {
+    "scope": "css,postcss,scss",
+    "prefix": "@keyframes identifier {\n\t\n}",
+    "body": "@keyframes ${1: identifier} {\n\t${2}\n};"
+  },
+  "@m|@media": {
+    "scope": "css,postcss,scss",
+    "prefix": "@media screen {\n\t\n}",
+    "body": "@media ${1: screen} {\n\t${0}\n};"
+  },
+  "ac1": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: start",
+    "body": "align-content: start;"
+  },
+  "ac2": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: end",
+    "body": "align-content: end;"
+  },
+  "ac3": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: flex-start",
+    "body": "align-content: flex-start;"
+  },
+  "ac4": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: flex-end",
+    "body": "align-content: flex-end;"
+  },
+  "ac5": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: center",
+    "body": "align-content: center;"
+  },
+  "ac6": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: space-between",
+    "body": "align-content: space-between;"
+  },
+  "ac7": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: space-around",
+    "body": "align-content: space-around;"
+  },
+  "ac8": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: stretch",
+    "body": "align-content: stretch;"
+  },
+  "ac9": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-content: space-evenly",
+    "body": "align-content: space-evenly;"
+  },
+  "ai1": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-items: start",
+    "body": "align-items: start;"
+  },
+  "ai2": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-items: end",
+    "body": "align-items: end;"
+  },
+  "ai3": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-items: flex-start",
+    "body": "align-items: flex-start;"
+  },
+  "ai4": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-items: flex-end",
+    "body": "align-items: flex-end;"
+  },
+  "ai5": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-items: center",
+    "body": "align-items: center;"
+  },
+  "ai6": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-items: baseline",
+    "body": "align-items: baseline;"
+  },
+  "ai7": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-items: stretch",
+    "body": "align-items: stretch;"
+  },
+  "anim": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation: name name name name name name name",
+    "body": "animation: ${1:name} ${2:duration} ${3:timing-function} ${4:delay} ${5:iteration-count} ${6:direction} ${7:fill-mode};"
+  },
+  "animdel": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-delay: time",
+    "body": "animation-delay: time;"
+  },
+  "animdir1": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-direction: normal",
+    "body": "animation-direction: normal;"
+  },
+  "animdir2": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-direction: reverse",
+    "body": "animation-direction: reverse;"
+  },
+  "animdir3": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-direction: alternate",
+    "body": "animation-direction: alternate;"
+  },
+  "animdir4": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-direction: alternate-reverse",
+    "body": "animation-direction: alternate-reverse;"
+  },
+  "animdur": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-duration: 0s",
+    "body": "animation-duration: ${1:0}s;"
+  },
+  "animfm1": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-fill-mode: both",
+    "body": "animation-fill-mode: both;"
+  },
+  "animfm2": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-fill-mode: forwards",
+    "body": "animation-fill-mode: forwards;"
+  },
+  "animfm3": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-fill-mode: backwards",
+    "body": "animation-fill-mode: backwards;"
+  },
+  "animic1": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-iteration-count: 1",
+    "body": "animation-iteration-count: 1;"
+  },
+  "animic2": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-iteration-count: infinite",
+    "body": "animation-iteration-count: infinite;"
+  },
+  "animn": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-name:",
+    "body": "animation-name: ${0};"
+  },
+  "animps1": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-play-state: running",
+    "body": "animation-play-state: running;"
+  },
+  "animps2": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-play-state: paused",
+    "body": "animation-play-state: paused;"
+  },
+  "animtf1": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-timing-function: linear",
+    "body": "animation-timing-function: linear;"
+  },
+  "animtf2": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-timing-function: ease",
+    "body": "animation-timing-function: ease;"
+  },
+  "animtf3": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-timing-function: ease-in",
+    "body": "animation-timing-function: ease-in;"
+  },
+  "animtf4": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-timing-function: ease-out",
+    "body": "animation-timing-function: ease-out;"
+  },
+  "animtf5": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-timing-function: ease-in-out",
+    "body": "animation-timing-function: ease-in-out;"
+  },
+  "animtf6": {
+    "scope": "css,postcss,scss",
+    "prefix": "animation-timing-function: cubic-bezier( 0.1, 0.1, 0.1, 0.1)",
+    "body": "animation-timing-function: cubic-bezier(${1:0.1}, ${2:0.7}, ${3:1.0}, ${3:0.1});"
+  },
+  "ap": {
+    "scope": "css,postcss,scss",
+    "prefix": "appearance: none",
+    "body": "appearance: none;"
+  },
+  "as1": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-self: start",
+    "body": "align-self: start;"
+  },
+  "as2": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-self: end",
+    "body": "align-self: end;"
+  },
+  "as3": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-self: auto",
+    "body": "align-self: auto;"
+  },
+  "as4": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-self: flex-start",
+    "body": "align-self: flex-start;"
+  },
+  "as5": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-self: flex-end",
+    "body": "align-self: flex-end;"
+  },
+  "as6": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-self: center",
+    "body": "align-self: center;"
+  },
+  "as7": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-self: baseline",
+    "body": "align-self: baseline;"
+  },
+  "as8": {
+    "scope": "css,postcss,scss",
+    "prefix": "align-self: stretch",
+    "body": "align-self: stretch;"
+  },
+  "b": {
+    "scope": "css,postcss,scss",
+    "prefix": "bottom:",
+    "body": "bottom: ${0};"
+  },
+  "bd": {
+    "scope": "css,postcss,scss",
+    "prefix": "border: 1px 1px 1px",
+    "body": "border: ${1:1px} ${2:solid} ${3:#000};"
+  },
+  "bdb": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom: 1px 1px 1px",
+    "body": "border-bottom: ${1:1px} ${2:solid} ${3:#000};"
+  },
+  "bdbc": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-color: #000",
+    "body": "border-bottom-color: ${1:#000};"
+  },
+  "bdbi": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-image: url()",
+    "body": "border-bottom-image: url(${0});"
+  },
+  "bdbk": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-break: close",
+    "body": "border-break: close;"
+  },
+  "bdbli1": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-left-image: url()",
+    "body": "border-bottom-left-image: url(${0});"
+  },
+  "bdbli2": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-left-image: continue",
+    "body": "border-bottom-left-image: continue;"
+  },
+  "bdblrs": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-left-radius:",
+    "body": "border-bottom-left-radius: ${0};"
+  },
+  "bdbri1": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-right-image: url()",
+    "body": "border-bottom-right-image: url(${0});"
+  },
+  "bdbri2": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-right-image: continue",
+    "body": "border-bottom-right-image: continue;"
+  },
+  "bdbrrs": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-right-radius:",
+    "body": "border-bottom-right-radius: ${0};"
+  },
+  "bdbs": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-style:",
+    "body": "border-bottom-style: ${0};"
+  },
+  "bdbw": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-bottom-width:",
+    "body": "border-bottom-width: ${0};"
+  },
+  "bdc": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-color: #000",
+    "body": "border-color: ${1:#000};"
+  },
+  "bdci1": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-corner-image: url()",
+    "body": "border-corner-image: url(${0});"
+  },
+  "bdci2": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-corner-image: continue",
+    "body": "border-corner-image: continue;"
+  },
+  "bdcl1": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-collapse: collapse",
+    "body": "border-collapse: collapse;"
+  },
+  "bdcl2": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-collapse: separate",
+    "body": "border-collapse: separate;"
+  },
+  "bdf1": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-fit: repeat",
+    "body": "border-fit: repeat;"
+  },
+  "bdf2": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-fit: clip",
+    "body": "border-fit: clip;"
+  },
+  "bdf3": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-fit: scale",
+    "body": "border-fit: scale;"
+  },
+  "bdf4": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-fit: stretch",
+    "body": "border-fit: stretch;"
+  },
+  "bdf5": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-fit: overwrite",
+    "body": "border-fit: overwrite;"
+  },
+  "bdf6": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-fit: overflow",
+    "body": "border-fit: overflow;"
+  },
+  "bdf7": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-fit: space",
+    "body": "border-fit: space;"
+  },
+  "bdi": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-image: url()",
+    "body": "border-image: url(${0});"
+  },
+  "bdl": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-left: 1px 1px 1px",
+    "body": "border-left: ${1:1px} ${2:solid} ${3:#000};"
+  },
+  "bdlc": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-left-color: #000",
+    "body": "border-left-color: ${1:#000};"
+  },
+  "bdlen": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-length:",
+    "body": "border-length: ${0};"
+  },
+  "bdli": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-left-image: url()",
+    "body": "border-left-image: url(${0});"
+  },
+  "bdls": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-left-style:",
+    "body": "border-left-style: ${0};"
+  },
+  "bdlw": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-left-width:",
+    "body": "border-left-width: ${0};"
+  },
+  "bdr": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-right: 1px 1px 1px",
+    "body": "border-right: ${1:1px} ${2:solid} ${3:#000};"
+  },
+  "bdrc": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-right-color: #000",
+    "body": "border-right-color: ${1:#000};"
+  },
+  "bdri": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-right-image: url()",
+    "body": "border-right-image: url(${0});"
+  },
+  "bdrs": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-radius:",
+    "body": "border-radius: ${0};"
+  },
+  "bdrst": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-right-style:",
+    "body": "border-right-style: ${0};"
+  },
+  "bdrw": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-right-width:",
+    "body": "border-right-width: ${0};"
+  },
+  "bds1": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: none",
+    "body": "border-style: none;"
+  },
+  "bds2": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: hidden",
+    "body": "border-style: hidden;"
+  },
+  "bds3": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: dotted",
+    "body": "border-style: dotted;"
+  },
+  "bds4": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: dashed",
+    "body": "border-style: dashed;"
+  },
+  "bds5": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: solid",
+    "body": "border-style: solid;"
+  },
+  "bds6": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: double",
+    "body": "border-style: double;"
+  },
+  "bds7": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: dot-dash",
+    "body": "border-style: dot-dash;"
+  },
+  "bds8": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: dot-dot-dash",
+    "body": "border-style: dot-dot-dash;"
+  },
+  "bds9": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: wave",
+    "body": "border-style: wave;"
+  },
+  "bds10": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: groove",
+    "body": "border-style: groove;"
+  },
+  "bds11": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: ridge",
+    "body": "border-style: ridge;"
+  },
+  "bds12": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: inset",
+    "body": "border-style: inset;"
+  },
+  "bds13": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-style: outset",
+    "body": "border-style: outset;"
+  },
+  "bdsp": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-spacing:",
+    "body": "border-spacing: ${0};"
+  },
+  "bdt": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top: 1px 1px 1px",
+    "body": "border-top: ${1:1px} ${2:solid} ${3:#000};"
+  },
+  "bdtc": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-color: #000",
+    "body": "border-top-color: ${1:#000};"
+  },
+  "bdti": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-image: url()",
+    "body": "border-top-image: url(${0});"
+  },
+  "bdtli1": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-left-image: url()",
+    "body": "border-top-left-image: url(${0});"
+  },
+  "bdtli2": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-left-image: continue",
+    "body": "border-top-left-image: continue;"
+  },
+  "bdtlrs": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-left-radius:",
+    "body": "border-top-left-radius: ${0};"
+  },
+  "bdtri1": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-right-image: url()",
+    "body": "border-top-right-image: url(${0});"
+  },
+  "bdtri2": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-right-image: continue",
+    "body": "border-top-right-image: continue;"
+  },
+  "bdtrrs": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-right-radius:",
+    "body": "border-top-right-radius: ${0};"
+  },
+  "bdts": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-style:",
+    "body": "border-top-style: ${0};"
+  },
+  "bdtw": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-top-width:",
+    "body": "border-top-width: ${0};"
+  },
+  "bdw": {
+    "scope": "css,postcss,scss",
+    "prefix": "border-width:",
+    "body": "border-width: ${0};"
+  },
+  "bfv1": {
+    "scope": "css,postcss,scss",
+    "prefix": "backface-visibility: hidden",
+    "body": "backface-visibility: hidden;"
+  },
+  "bfv2": {
+    "scope": "css,postcss,scss",
+    "prefix": "backface-visibility: visible",
+    "body": "backface-visibility: visible;"
+  },
+  "bg": {
+    "scope": "css,postcss,scss",
+    "prefix": "background: #000",
+    "body": "background: ${1:#000};"
+  },
+  "bga1": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-attachment: fixed",
+    "body": "background-attachment: fixed;"
+  },
+  "bga2": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-attachment: scroll",
+    "body": "background-attachment: scroll;"
+  },
+  "bgbk1": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-break: bounding-box",
+    "body": "background-break: bounding-box;"
+  },
+  "bgbk2": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-break: each-box",
+    "body": "background-break: each-box;"
+  },
+  "bgbk3": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-break: continuous",
+    "body": "background-break: continuous;"
+  },
+  "bgc": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-color: # fff",
+    "body": "background-color: #${1:fff};"
+  },
+  "bgcp1": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-clip: padding-box",
+    "body": "background-clip: padding-box;"
+  },
+  "bgcp2": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-clip: border-box",
+    "body": "background-clip: border-box;"
+  },
+  "bgcp3": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-clip: content-box",
+    "body": "background-clip: content-box;"
+  },
+  "bgcp4": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-clip: no-clip",
+    "body": "background-clip: no-clip;"
+  },
+  "bgi": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-image: url()",
+    "body": "background-image: url(${0});"
+  },
+  "bgo1": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-origin: padding-box",
+    "body": "background-origin: padding-box;"
+  },
+  "bgo2": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-origin: border-box",
+    "body": "background-origin: border-box;"
+  },
+  "bgo3": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-origin: content-box",
+    "body": "background-origin: content-box;"
+  },
+  "bgp": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-position: 0 0",
+    "body": "background-position: ${1:0} ${2:0};"
+  },
+  "bgpx": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-position-x:",
+    "body": "background-position-x: ${0};"
+  },
+  "bgpy": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-position-y:",
+    "body": "background-position-y: ${0};"
+  },
+  "bgr1": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-repeat: no-repeat",
+    "body": "background-repeat: no-repeat;"
+  },
+  "bgr2": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-repeat: repeat-x",
+    "body": "background-repeat: repeat-x;"
+  },
+  "bgr3": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-repeat: repeat-y",
+    "body": "background-repeat: repeat-y;"
+  },
+  "bgr4": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-repeat: space",
+    "body": "background-repeat: space;"
+  },
+  "bgr5": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-repeat: round",
+    "body": "background-repeat: round;"
+  },
+  "bgsz1": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-size: contain",
+    "body": "background-size: contain;"
+  },
+  "bgsz2": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-size: cover",
+    "body": "background-size: cover;"
+  },
+  "bxsh1": {
+    "scope": "css,postcss,scss",
+    "prefix": "box-shadow: ${1:inset } hoff hoff hoff hoff",
+    "body": "box-shadow: ${1:inset }${2:hoff} ${3:voff} ${4:blur} ${5:#000};"
+  },
+  "bxsh2": {
+    "scope": "css,postcss,scss",
+    "prefix": "box-shadow: none",
+    "body": "box-shadow: none;"
+  },
+  "bxsz1": {
+    "scope": "css,postcss,scss",
+    "prefix": "box-sizing: border-box",
+    "body": "box-sizing: border-box;"
+  },
+  "bxsz2": {
+    "scope": "css,postcss,scss",
+    "prefix": "box-sizing: content-box",
+    "body": "box-sizing: content-box;"
+  },
+  "bxsz3": {
+    "scope": "css,postcss,scss",
+    "prefix": "box-sizing: border-box",
+    "body": "box-sizing: border-box;"
+  },
+  "c": {
+    "scope": "css,postcss,scss",
+    "prefix": "color: #000",
+    "body": "color: ${1:#000};"
+  },
+  "cr": {
+    "scope": "css,postcss,scss",
+    "prefix": "color: rgb( 0, 0, 0)",
+    "body": "color: rgb(${1:0}, ${2:0}, ${3:0});"
+  },
+  "cra": {
+    "scope": "css,postcss,scss",
+    "prefix": "color: rgba( 0, 0, 0, 0)",
+    "body": "color: rgba(${1:0}, ${2:0}, ${3:0}, ${4:.5});"
+  },
+  "cl1": {
+    "scope": "css,postcss,scss",
+    "prefix": "clear: both",
+    "body": "clear: both;"
+  },
+  "cl2": {
+    "scope": "css,postcss,scss",
+    "prefix": "clear: left",
+    "body": "clear: left;"
+  },
+  "cl3": {
+    "scope": "css,postcss,scss",
+    "prefix": "clear: right",
+    "body": "clear: right;"
+  },
+  "cl4": {
+    "scope": "css,postcss,scss",
+    "prefix": "clear: none",
+    "body": "clear: none;"
+  },
+  "cm": {"scope": "css,postcss,scss", "prefix": "/* */", "body": "/* ${0} */;"},
+  "cnt1": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: ''",
+    "body": "content: '${0}';"
+  },
+  "cnt2": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: normal",
+    "body": "content: normal;"
+  },
+  "cnt3": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: open-quote",
+    "body": "content: open-quote;"
+  },
+  "cnt4": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: no-open-quote",
+    "body": "content: no-open-quote;"
+  },
+  "cnt5": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: close-quote",
+    "body": "content: close-quote;"
+  },
+  "cnt6": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: no-close-quote",
+    "body": "content: no-close-quote;"
+  },
+  "cnt7": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: attr()",
+    "body": "content: attr(${0});"
+  },
+  "cnt8": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: counter()",
+    "body": "content: counter(${0});"
+  },
+  "cnt9": {
+    "scope": "css,postcss,scss",
+    "prefix": "content: counters()",
+    "body": "content: counters(${0});"
+  },
+  "coi": {
+    "scope": "css,postcss,scss",
+    "prefix": "counter-increment:",
+    "body": "counter-increment: ${0};"
+  },
+  "colm": {
+    "scope": "css,postcss,scss",
+    "prefix": "columns:",
+    "body": "columns: ${0};"
+  },
+  "colmc": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-count:",
+    "body": "column-count: ${0};"
+  },
+  "colmf": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-fill:",
+    "body": "column-fill: ${0};"
+  },
+  "colmg": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-gap:",
+    "body": "column-gap: ${0};"
+  },
+  "colmr": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-rule:",
+    "body": "column-rule: ${0};"
+  },
+  "colmrc": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-rule-color:",
+    "body": "column-rule-color: ${0};"
+  },
+  "colmrs": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-rule-style:",
+    "body": "column-rule-style: ${0};"
+  },
+  "colmrw": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-rule-width:",
+    "body": "column-rule-width: ${0};"
+  },
+  "colms": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-span:",
+    "body": "column-span: ${0};"
+  },
+  "colmw": {
+    "scope": "css,postcss,scss",
+    "prefix": "column-width:",
+    "body": "column-width: ${0};"
+  },
+  "cor": {
+    "scope": "css,postcss,scss",
+    "prefix": "counter-reset:",
+    "body": "counter-reset: ${0};"
+  },
+  "cp1": {
+    "scope": "css,postcss,scss",
+    "prefix": "clip: auto",
+    "body": "clip: auto;"
+  },
+  "cp2": {
+    "scope": "css,postcss,scss",
+    "prefix": "clip: rect( top top top top)",
+    "body": "clip: rect(${1:top} ${2:right} ${3:bottom} ${4:left});"
+  },
+  "cps1": {
+    "scope": "css,postcss,scss",
+    "prefix": "caption-side: top",
+    "body": "caption-side: top;"
+  },
+  "cps2": {
+    "scope": "css,postcss,scss",
+    "prefix": "caption-side: bottom",
+    "body": "caption-side: bottom;"
+  },
+  "cur1": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: pointer",
+    "body": "cursor: pointer;"
+  },
+  "cur2": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: auto",
+    "body": "cursor: auto;"
+  },
+  "cur3": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: default",
+    "body": "cursor: default;"
+  },
+  "cur4": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: crosshair",
+    "body": "cursor: crosshair;"
+  },
+  "cur5": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: hand",
+    "body": "cursor: hand;"
+  },
+  "cur6": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: help",
+    "body": "cursor: help;"
+  },
+  "cur7": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: move",
+    "body": "cursor: move;"
+  },
+  "cur8": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: pointer",
+    "body": "cursor: pointer;"
+  },
+  "cur9": {
+    "scope": "css,postcss,scss",
+    "prefix": "cursor: text",
+    "body": "cursor: text;"
+  },
+  "d1": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: block",
+    "body": "display: block;"
+  },
+  "d2": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: none",
+    "body": "display: none;"
+  },
+  "d3": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: flex",
+    "body": "display: flex;"
+  },
+  "d4": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: inline-flex",
+    "body": "display: inline-flex;"
+  },
+  "d5": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: inline",
+    "body": "display: inline;"
+  },
+  "d6": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: inline-block",
+    "body": "display: inline-block;"
+  },
+  "d7": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: grid",
+    "body": "display: grid;"
+  },
+  "d8": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: inline-grid",
+    "body": "display: inline-grid;"
+  },
+  "d9": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: subgrid",
+    "body": "display: subgrid;"
+  },
+  "d10": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: list-item",
+    "body": "display: list-item;"
+  },
+  "d11": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: run-in",
+    "body": "display: run-in;"
+  },
+  "d12": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: compact",
+    "body": "display: compact;"
+  },
+  "d13": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table",
+    "body": "display: table;"
+  },
+  "d14": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: inline-table",
+    "body": "display: inline-table;"
+  },
+  "d15": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table-caption",
+    "body": "display: table-caption;"
+  },
+  "d16": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table-column",
+    "body": "display: table-column;"
+  },
+  "d17": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table-column-group",
+    "body": "display: table-column-group;"
+  },
+  "d18": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table-header-group",
+    "body": "display: table-header-group;"
+  },
+  "d19": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table-footer-group",
+    "body": "display: table-footer-group;"
+  },
+  "d20": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table-row",
+    "body": "display: table-row;"
+  },
+  "d21": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table-row-group",
+    "body": "display: table-row-group;"
+  },
+  "d22": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: table-cell",
+    "body": "display: table-cell;"
+  },
+  "d23": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: ruby",
+    "body": "display: ruby;"
+  },
+  "d24": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: ruby-base",
+    "body": "display: ruby-base;"
+  },
+  "d25": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: ruby-base-group",
+    "body": "display: ruby-base-group;"
+  },
+  "d26": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: ruby-text",
+    "body": "display: ruby-text;"
+  },
+  "d27": {
+    "scope": "css,postcss,scss",
+    "prefix": "display: ruby-text-group",
+    "body": "display: ruby-text-group;"
+  },
+  "ec1": {
+    "scope": "css,postcss,scss",
+    "prefix": "empty-cells: show",
+    "body": "empty-cells: show;"
+  },
+  "ec2": {
+    "scope": "css,postcss,scss",
+    "prefix": "empty-cells: hide",
+    "body": "empty-cells: hide;"
+  },
+  "f": {
+    "scope": "css,postcss,scss",
+    "prefix": "font: 1em 1em",
+    "body": "font: ${1:1em} ${2:sans-serif};"
+  },
+  "fd1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-display: auto",
+    "body": "font-display: auto;"
+  },
+  "fd2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-display: block",
+    "body": "font-display: block;"
+  },
+  "fd3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-display: swap",
+    "body": "font-display: swap;"
+  },
+  "fd4": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-display: fallback",
+    "body": "font-display: fallback;"
+  },
+  "fd5": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-display: optional",
+    "body": "font-display: optional;"
+  },
+  "fef1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-effect: none",
+    "body": "font-effect: none;"
+  },
+  "fef2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-effect: engrave",
+    "body": "font-effect: engrave;"
+  },
+  "fef3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-effect: emboss",
+    "body": "font-effect: emboss;"
+  },
+  "fef4": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-effect: outline",
+    "body": "font-effect: outline;"
+  },
+  "fem": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-emphasize:",
+    "body": "font-emphasize: ${0};"
+  },
+  "femp1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-emphasize-position: before",
+    "body": "font-emphasize-position: before;"
+  },
+  "femp2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-emphasize-position: after",
+    "body": "font-emphasize-position: after;"
+  },
+  "fems1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-emphasize-style: none",
+    "body": "font-emphasize-style: none;"
+  },
+  "fems2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-emphasize-style: accent",
+    "body": "font-emphasize-style: accent;"
+  },
+  "fems3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-emphasize-style: dot",
+    "body": "font-emphasize-style: dot;"
+  },
+  "fems4": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-emphasize-style: circle",
+    "body": "font-emphasize-style: circle;"
+  },
+  "fems5": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-emphasize-style: disc",
+    "body": "font-emphasize-style: disc;"
+  },
+  "ff1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-family: serif",
+    "body": "font-family: serif;"
+  },
+  "ff2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-family: sans-serif",
+    "body": "font-family: sans-serif;"
+  },
+  "ff3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-family: cursive",
+    "body": "font-family: cursive;"
+  },
+  "ff4": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-family: fantasy",
+    "body": "font-family: fantasy;"
+  },
+  "ff5": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-family: monospace",
+    "body": "font-family: monospace;"
+  },
+  "fft": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-family: \"Times New Roman\", Times, Baskerville, Georgia, serif",
+    "body": "font-family: \"Times New Roman\", Times, Baskerville, Georgia, serif;"
+  },
+  "ffa": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif",
+    "body": "font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;"
+  },
+  "ffv": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-family: Verdana, Geneva, sans-serif",
+    "body": "font-family: Verdana, Geneva, sans-serif;"
+  },
+  "fl1": {
+    "scope": "css,postcss,scss",
+    "prefix": "float: left",
+    "body": "float: left;"
+  },
+  "fl2": {
+    "scope": "css,postcss,scss",
+    "prefix": "float: right",
+    "body": "float: right;"
+  },
+  "fl3": {
+    "scope": "css,postcss,scss",
+    "prefix": "float: none",
+    "body": "float: none;"
+  },
+  "fs1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-style: italic",
+    "body": "font-style: italic;"
+  },
+  "fs2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-style: normal",
+    "body": "font-style: normal;"
+  },
+  "fs3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-style: oblique",
+    "body": "font-style: oblique;"
+  },
+  "fsm1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-smoothing: antialiased",
+    "body": "font-smoothing: antialiased;"
+  },
+  "fsm2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-smoothing: subpixel-antialiased",
+    "body": "font-smoothing: subpixel-antialiased;"
+  },
+  "fsm3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-smoothing: none",
+    "body": "font-smoothing: none;"
+  },
+  "fst1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: normal",
+    "body": "font-stretch: normal;"
+  },
+  "fst2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: ultra-condensed",
+    "body": "font-stretch: ultra-condensed;"
+  },
+  "fst3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: extra-condensed",
+    "body": "font-stretch: extra-condensed;"
+  },
+  "fst4": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: condensed",
+    "body": "font-stretch: condensed;"
+  },
+  "fst5": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: semi-condensed",
+    "body": "font-stretch: semi-condensed;"
+  },
+  "fst6": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: semi-expanded",
+    "body": "font-stretch: semi-expanded;"
+  },
+  "fst7": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: expanded",
+    "body": "font-stretch: expanded;"
+  },
+  "fst8": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: extra-expanded",
+    "body": "font-stretch: extra-expanded;"
+  },
+  "fst9": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-stretch: ultra-expanded",
+    "body": "font-stretch: ultra-expanded;"
+  },
+  "fv1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-variant: normal",
+    "body": "font-variant: normal;"
+  },
+  "fv2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-variant: small-caps",
+    "body": "font-variant: small-caps;"
+  },
+  "fvs1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-variation-settings: normal",
+    "body": "font-variation-settings: normal;"
+  },
+  "fvs2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-variation-settings: inherit",
+    "body": "font-variation-settings: inherit;"
+  },
+  "fvs3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-variation-settings: initial",
+    "body": "font-variation-settings: initial;"
+  },
+  "fvs4": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-variation-settings: unset",
+    "body": "font-variation-settings: unset;"
+  },
+  "fw1": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-weight: normal",
+    "body": "font-weight: normal;"
+  },
+  "fw2": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-weight: bold",
+    "body": "font-weight: bold;"
+  },
+  "fw3": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-weight: bolder",
+    "body": "font-weight: bolder;"
+  },
+  "fw4": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-weight: lighter",
+    "body": "font-weight: lighter;"
+  },
+  "fx": {"scope": "css,postcss,scss", "prefix": "flex:", "body": "flex: ${0};"},
+  "fxb1": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-basis: fill",
+    "body": "flex-basis: fill;"
+  },
+  "fxb2": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-basis: max-content",
+    "body": "flex-basis: max-content;"
+  },
+  "fxb3": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-basis: min-content",
+    "body": "flex-basis: min-content;"
+  },
+  "fxb4": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-basis: fit-content",
+    "body": "flex-basis: fit-content;"
+  },
+  "fxb5": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-basis: content",
+    "body": "flex-basis: content;"
+  },
+  "fxd1": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-direction: row",
+    "body": "flex-direction: row;"
+  },
+  "fxd2": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-direction: row-reverse",
+    "body": "flex-direction: row-reverse;"
+  },
+  "fxd3": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-direction: column",
+    "body": "flex-direction: column;"
+  },
+  "fxd4": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-direction: column-reverse",
+    "body": "flex-direction: column-reverse;"
+  },
+  "fxf": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-flow:",
+    "body": "flex-flow: ${0};"
+  },
+  "fxg": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-grow:",
+    "body": "flex-grow: ${0};"
+  },
+  "fxsh": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-shrink:",
+    "body": "flex-shrink: ${0};"
+  },
+  "fxw1": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-wrap: nowrap",
+    "body": "flex-wrap: nowrap;"
+  },
+  "fxw2": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-wrap: wrap",
+    "body": "flex-wrap: wrap;"
+  },
+  "fxw3": {
+    "scope": "css,postcss,scss",
+    "prefix": "flex-wrap: wrap-reverse",
+    "body": "flex-wrap: wrap-reverse;"
+  },
+  "fsz": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-size:",
+    "body": "font-size: ${0};"
+  },
+  "fsza": {
+    "scope": "css,postcss,scss",
+    "prefix": "font-size-adjust:",
+    "body": "font-size-adjust: ${0};"
+  },
+  "gtc1": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-template-columns: repeat()",
+    "body": "grid-template-columns: repeat();"
+  },
+  "gtc2": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-template-columns: minmax()",
+    "body": "grid-template-columns: minmax();"
+  },
+  "gtr1": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-template-rows: repeat()",
+    "body": "grid-template-rows: repeat();"
+  },
+  "gtr2": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-template-rows: minmax()",
+    "body": "grid-template-rows: minmax();"
+  },
+  "gta": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-template-areas:",
+    "body": "grid-template-areas: ${0};"
+  },
+  "gt": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-template:",
+    "body": "grid-template: ${0};"
+  },
+  "gg": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-gap:",
+    "body": "grid-gap: ${0};"
+  },
+  "gcg": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-column-gap:",
+    "body": "grid-column-gap: ${0};"
+  },
+  "grg": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-row-gap:",
+    "body": "grid-row-gap: ${0};"
+  },
+  "gac1": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-columns: auto",
+    "body": "grid-auto-columns: auto;"
+  },
+  "gac2": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-columns: minmax()",
+    "body": "grid-auto-columns: minmax();"
+  },
+  "gar1": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-rows: auto",
+    "body": "grid-auto-rows: auto;"
+  },
+  "gar2": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-rows: minmax()",
+    "body": "grid-auto-rows: minmax();"
+  },
+  "gaf1": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-flow: row",
+    "body": "grid-auto-flow: row;"
+  },
+  "gaf2": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-flow: column",
+    "body": "grid-auto-flow: column;"
+  },
+  "gaf3": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-flow: dense",
+    "body": "grid-auto-flow: dense;"
+  },
+  "gaf4": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-flow: inherit",
+    "body": "grid-auto-flow: inherit;"
+  },
+  "gaf5": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-flow: initial",
+    "body": "grid-auto-flow: initial;"
+  },
+  "gaf6": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-auto-flow: unset",
+    "body": "grid-auto-flow: unset;"
+  },
+  "gd": {"scope": "css,postcss,scss", "prefix": "grid:", "body": "grid: ${0};"},
+  "gc": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-column:",
+    "body": "grid-column: ${0};"
+  },
+  "gcs": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-column-start:",
+    "body": "grid-column-start: ${0};"
+  },
+  "gce": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-column-end:",
+    "body": "grid-column-end: ${0};"
+  },
+  "gr": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-row:",
+    "body": "grid-row: ${0};"
+  },
+  "grs": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-row-start:",
+    "body": "grid-row-start: ${0};"
+  },
+  "gre": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-row-end:",
+    "body": "grid-row-end: ${0};"
+  },
+  "ga": {
+    "scope": "css,postcss,scss",
+    "prefix": "grid-area:",
+    "body": "grid-area: ${0};"
+  },
+  "h": {
+    "scope": "css,postcss,scss",
+    "prefix": "height:",
+    "body": "height: ${0};"
+  },
+  "jc1": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: start",
+    "body": "justify-content: start;"
+  },
+  "jc2": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: end",
+    "body": "justify-content: end;"
+  },
+  "jc3": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: stretch",
+    "body": "justify-content: stretch;"
+  },
+  "jc4": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: flex-start",
+    "body": "justify-content: flex-start;"
+  },
+  "jc5": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: flex-end",
+    "body": "justify-content: flex-end;"
+  },
+  "jc6": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: center",
+    "body": "justify-content: center;"
+  },
+  "jc7": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: space-between",
+    "body": "justify-content: space-between;"
+  },
+  "jc8": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: space-around",
+    "body": "justify-content: space-around;"
+  },
+  "jc9": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-content: space-evenly",
+    "body": "justify-content: space-evenly;"
+  },
+  "ji1": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-items: start",
+    "body": "justify-items: start;"
+  },
+  "ji2": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-items: end",
+    "body": "justify-items: end;"
+  },
+  "ji3": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-items: center",
+    "body": "justify-items: center;"
+  },
+  "ji4": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-items: stretch",
+    "body": "justify-items: stretch;"
+  },
+  "js1": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-self: start",
+    "body": "justify-self: start;"
+  },
+  "js2": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-self: end",
+    "body": "justify-self: end;"
+  },
+  "js3": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-self: center",
+    "body": "justify-self: center;"
+  },
+  "js4": {
+    "scope": "css,postcss,scss",
+    "prefix": "justify-self: stretch",
+    "body": "justify-self: stretch;"
+  },
+  "l": {"scope": "css,postcss,scss", "prefix": "left:", "body": "left: ${0};"},
+  "lg": {
+    "scope": "css,postcss,scss",
+    "prefix": "background-image: linear-gradient()",
+    "body": "background-image: linear-gradient(${1});"
+  },
+  "lh": {
+    "scope": "css,postcss,scss",
+    "prefix": "line-height:",
+    "body": "line-height: ${0};"
+  },
+  "lis": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style:",
+    "body": "list-style: ${0};"
+  },
+  "lisi": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-image:",
+    "body": "list-style-image: ${0};"
+  },
+  "lisp1": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-position: inside",
+    "body": "list-style-position: inside;"
+  },
+  "lisp2": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-position: outside",
+    "body": "list-style-position: outside;"
+  },
+  "list1": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-type: disc",
+    "body": "list-style-type: disc;"
+  },
+  "list2": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-type: circle",
+    "body": "list-style-type: circle;"
+  },
+  "list3": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-type: square",
+    "body": "list-style-type: square;"
+  },
+  "list4": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-type: decimal",
+    "body": "list-style-type: decimal;"
+  },
+  "list5": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-type: decimal-leading-zero",
+    "body": "list-style-type: decimal-leading-zero;"
+  },
+  "list6": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-type: lower-roman",
+    "body": "list-style-type: lower-roman;"
+  },
+  "list7": {
+    "scope": "css,postcss,scss",
+    "prefix": "list-style-type: upper-roman",
+    "body": "list-style-type: upper-roman;"
+  },
+  "lts": {
+    "scope": "css,postcss,scss",
+    "prefix": "letter-spacing: normal",
+    "body": "letter-spacing: normal;"
+  },
+  "m": {
+    "scope": "css,postcss,scss",
+    "prefix": "margin:",
+    "body": "margin: ${0};"
+  },
+  "mah": {
+    "scope": "css,postcss,scss",
+    "prefix": "max-height:",
+    "body": "max-height: ${0};"
+  },
+  "mar": {
+    "scope": "css,postcss,scss",
+    "prefix": "max-resolution:",
+    "body": "max-resolution: ${0};"
+  },
+  "maw": {
+    "scope": "css,postcss,scss",
+    "prefix": "max-width:",
+    "body": "max-width: ${0};"
+  },
+  "mb": {
+    "scope": "css,postcss,scss",
+    "prefix": "margin-bottom:",
+    "body": "margin-bottom: ${0};"
+  },
+  "mih": {
+    "scope": "css,postcss,scss",
+    "prefix": "min-height:",
+    "body": "min-height: ${0};"
+  },
+  "mir": {
+    "scope": "css,postcss,scss",
+    "prefix": "min-resolution:",
+    "body": "min-resolution: ${0};"
+  },
+  "miw": {
+    "scope": "css,postcss,scss",
+    "prefix": "min-width:",
+    "body": "min-width: ${0};"
+  },
+  "ml": {
+    "scope": "css,postcss,scss",
+    "prefix": "margin-left:",
+    "body": "margin-left: ${0};"
+  },
+  "mr": {
+    "scope": "css,postcss,scss",
+    "prefix": "margin-right:",
+    "body": "margin-right: ${0};"
+  },
+  "mt": {
+    "scope": "css,postcss,scss",
+    "prefix": "margin-top:",
+    "body": "margin-top: ${0};"
+  },
+  "ol": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline:",
+    "body": "outline: ${0};"
+  },
+  "olc1": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-color: #000",
+    "body": "outline-color: ${1:#000};"
+  },
+  "olc2": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-color: invert",
+    "body": "outline-color: invert;"
+  },
+  "olo": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-offset:",
+    "body": "outline-offset: ${0};"
+  },
+  "ols1": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: none",
+    "body": "outline-style: none;"
+  },
+  "ols2": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: dotted",
+    "body": "outline-style: dotted;"
+  },
+  "ols3": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: dashed",
+    "body": "outline-style: dashed;"
+  },
+  "ols4": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: solid",
+    "body": "outline-style: solid;"
+  },
+  "ols5": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: double",
+    "body": "outline-style: double;"
+  },
+  "ols6": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: groove",
+    "body": "outline-style: groove;"
+  },
+  "ols7": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: ridge",
+    "body": "outline-style: ridge;"
+  },
+  "ols8": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: inset",
+    "body": "outline-style: inset;"
+  },
+  "ols9": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-style: outset",
+    "body": "outline-style: outset;"
+  },
+  "olw1": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-width|thin|medium|thic: outline-width",
+    "body": "outline-width|thin|medium|thic: outline-width;"
+  },
+  "olw2": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-width|thin|medium|thic: thin",
+    "body": "outline-width|thin|medium|thic: thin;"
+  },
+  "olw3": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-width|thin|medium|thic: medium",
+    "body": "outline-width|thin|medium|thic: medium;"
+  },
+  "olw4": {
+    "scope": "css,postcss,scss",
+    "prefix": "outline-width|thin|medium|thic: thick",
+    "body": "outline-width|thin|medium|thic: thick;"
+  },
+  "op|opa": {
+    "scope": "css,postcss,scss",
+    "prefix": "opacity:",
+    "body": "opacity: ${0};"
+  },
+  "ord": {
+    "scope": "css,postcss,scss",
+    "prefix": "order:",
+    "body": "order: ${0};"
+  },
+  "ori1": {
+    "scope": "css,postcss,scss",
+    "prefix": "orientation: landscape",
+    "body": "orientation: landscape;"
+  },
+  "ori2": {
+    "scope": "css,postcss,scss",
+    "prefix": "orientation: portrait",
+    "body": "orientation: portrait;"
+  },
+  "orp": {
+    "scope": "css,postcss,scss",
+    "prefix": "orphans:",
+    "body": "orphans: ${0};"
+  },
+  "ov1": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow: hidden",
+    "body": "overflow: hidden;"
+  },
+  "ov2": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow: visible",
+    "body": "overflow: visible;"
+  },
+  "ov3": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow: hidden",
+    "body": "overflow: hidden;"
+  },
+  "ov4": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow: scroll",
+    "body": "overflow: scroll;"
+  },
+  "ov5": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow: auto",
+    "body": "overflow: auto;"
+  },
+  "ovs1": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-style: scrollbar",
+    "body": "overflow-style: scrollbar;"
+  },
+  "ovs2": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-style: auto",
+    "body": "overflow-style: auto;"
+  },
+  "ovs3": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-style: scrollbar",
+    "body": "overflow-style: scrollbar;"
+  },
+  "ovs4": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-style: panner",
+    "body": "overflow-style: panner;"
+  },
+  "ovs5": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-style: move",
+    "body": "overflow-style: move;"
+  },
+  "ovs6": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-style: marquee",
+    "body": "overflow-style: marquee;"
+  },
+  "ovx1": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-x: hidden",
+    "body": "overflow-x: hidden;"
+  },
+  "ovx2": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-x: visible",
+    "body": "overflow-x: visible;"
+  },
+  "ovx3": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-x: hidden",
+    "body": "overflow-x: hidden;"
+  },
+  "ovx4": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-x: scroll",
+    "body": "overflow-x: scroll;"
+  },
+  "ovx5": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-x: auto",
+    "body": "overflow-x: auto;"
+  },
+  "ovy1": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-y: hidden",
+    "body": "overflow-y: hidden;"
+  },
+  "ovy2": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-y: visible",
+    "body": "overflow-y: visible;"
+  },
+  "ovy3": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-y: hidden",
+    "body": "overflow-y: hidden;"
+  },
+  "ovy4": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-y: scroll",
+    "body": "overflow-y: scroll;"
+  },
+  "ovy5": {
+    "scope": "css,postcss,scss",
+    "prefix": "overflow-y: auto",
+    "body": "overflow-y: auto;"
+  },
+  "p": {
+    "scope": "css,postcss,scss",
+    "prefix": "padding:",
+    "body": "padding: ${0};"
+  },
+  "pb": {
+    "scope": "css,postcss,scss",
+    "prefix": "padding-bottom:",
+    "body": "padding-bottom: ${0};"
+  },
+  "pgba1": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-after: auto",
+    "body": "page-break-after: auto;"
+  },
+  "pgba2": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-after: always",
+    "body": "page-break-after: always;"
+  },
+  "pgba3": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-after: left",
+    "body": "page-break-after: left;"
+  },
+  "pgba4": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-after: right",
+    "body": "page-break-after: right;"
+  },
+  "pgbb1": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-before: auto",
+    "body": "page-break-before: auto;"
+  },
+  "pgbb2": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-before: always",
+    "body": "page-break-before: always;"
+  },
+  "pgbb3": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-before: left",
+    "body": "page-break-before: left;"
+  },
+  "pgbb4": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-before: right",
+    "body": "page-break-before: right;"
+  },
+  "pgbi1": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-inside: auto",
+    "body": "page-break-inside: auto;"
+  },
+  "pgbi2": {
+    "scope": "css,postcss,scss",
+    "prefix": "page-break-inside: avoid",
+    "body": "page-break-inside: avoid;"
+  },
+  "pl": {
+    "scope": "css,postcss,scss",
+    "prefix": "padding-left:",
+    "body": "padding-left: ${0};"
+  },
+  "pos1": {
+    "scope": "css,postcss,scss",
+    "prefix": "position: relative",
+    "body": "position: relative;"
+  },
+  "pos2": {
+    "scope": "css,postcss,scss",
+    "prefix": "position: absolute",
+    "body": "position: absolute;"
+  },
+  "pos3": {
+    "scope": "css,postcss,scss",
+    "prefix": "position: relative",
+    "body": "position: relative;"
+  },
+  "pos4": {
+    "scope": "css,postcss,scss",
+    "prefix": "position: fixed",
+    "body": "position: fixed;"
+  },
+  "pos5": {
+    "scope": "css,postcss,scss",
+    "prefix": "position: static",
+    "body": "position: static;"
+  },
+  "pr": {
+    "scope": "css,postcss,scss",
+    "prefix": "padding-right:",
+    "body": "padding-right: ${0};"
+  },
+  "pt": {
+    "scope": "css,postcss,scss",
+    "prefix": "padding-top:",
+    "body": "padding-top: ${0};"
+  },
+  "q": {
+    "scope": "css,postcss,scss",
+    "prefix": "quotes:",
+    "body": "quotes: ${0};"
+  },
+  "qen": {
+    "scope": "css,postcss,scss",
+    "prefix": "quotes: '\\201C' '\\201D' '\\2018' '\\2019'",
+    "body": "quotes: '\\201C' '\\201D' '\\2018' '\\2019';"
+  },
+  "qru": {
+    "scope": "css,postcss,scss",
+    "prefix": "quotes: '\\00AB' '\\00BB' '\\201E' '\\201C'",
+    "body": "quotes: '\\00AB' '\\00BB' '\\201E' '\\201C';"
+  },
+  "r": {
+    "scope": "css,postcss,scss",
+    "prefix": "right:",
+    "body": "right: ${0};"
+  },
+  "rsz1": {
+    "scope": "css,postcss,scss",
+    "prefix": "resize: none",
+    "body": "resize: none;"
+  },
+  "rsz2": {
+    "scope": "css,postcss,scss",
+    "prefix": "resize: both",
+    "body": "resize: both;"
+  },
+  "rsz3": {
+    "scope": "css,postcss,scss",
+    "prefix": "resize: horizontal",
+    "body": "resize: horizontal;"
+  },
+  "rsz4": {
+    "scope": "css,postcss,scss",
+    "prefix": "resize: vertical",
+    "body": "resize: vertical;"
+  },
+  "t": {"scope": "css,postcss,scss", "prefix": "top:", "body": "top: ${0};"},
+  "ta1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-align: left",
+    "body": "text-align: left;"
+  },
+  "ta2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-align: center",
+    "body": "text-align: center;"
+  },
+  "ta3": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-align: right",
+    "body": "text-align: right;"
+  },
+  "ta4": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-align: justify",
+    "body": "text-align: justify;"
+  },
+  "tal1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-align-last: left",
+    "body": "text-align-last: left;"
+  },
+  "tal2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-align-last: center",
+    "body": "text-align-last: center;"
+  },
+  "tal3": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-align-last: right",
+    "body": "text-align-last: right;"
+  },
+  "tbl": {
+    "scope": "css,postcss,scss",
+    "prefix": "table-layout: fixed",
+    "body": "table-layout: fixed;"
+  },
+  "td1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-decoration: none",
+    "body": "text-decoration: none;"
+  },
+  "td2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-decoration: underline",
+    "body": "text-decoration: underline;"
+  },
+  "td3": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-decoration: overline",
+    "body": "text-decoration: overline;"
+  },
+  "td4": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-decoration: line-through",
+    "body": "text-decoration: line-through;"
+  },
+  "te1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-emphasis: none",
+    "body": "text-emphasis: none;"
+  },
+  "te2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-emphasis: accent",
+    "body": "text-emphasis: accent;"
+  },
+  "te3": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-emphasis: dot",
+    "body": "text-emphasis: dot;"
+  },
+  "te4": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-emphasis: circle",
+    "body": "text-emphasis: circle;"
+  },
+  "te5": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-emphasis: disc",
+    "body": "text-emphasis: disc;"
+  },
+  "te6": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-emphasis: before",
+    "body": "text-emphasis: before;"
+  },
+  "te7": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-emphasis: after",
+    "body": "text-emphasis: after;"
+  },
+  "th1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-height: auto",
+    "body": "text-height: auto;"
+  },
+  "th2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-height: font-size",
+    "body": "text-height: font-size;"
+  },
+  "th3": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-height: text-size",
+    "body": "text-height: text-size;"
+  },
+  "th4": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-height: max-size",
+    "body": "text-height: max-size;"
+  },
+  "ti": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-indent:",
+    "body": "text-indent: ${0};"
+  },
+  "tj1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-justify: auto",
+    "body": "text-justify: auto;"
+  },
+  "tj2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-justify: inter-word",
+    "body": "text-justify: inter-word;"
+  },
+  "tj3": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-justify: inter-ideograph",
+    "body": "text-justify: inter-ideograph;"
+  },
+  "tj4": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-justify: inter-cluster",
+    "body": "text-justify: inter-cluster;"
+  },
+  "tj5": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-justify: distribute",
+    "body": "text-justify: distribute;"
+  },
+  "tj6": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-justify: kashida",
+    "body": "text-justify: kashida;"
+  },
+  "tj7": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-justify: tibetan",
+    "body": "text-justify: tibetan;"
+  },
+  "to": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-outline: 0 0 0",
+    "body": "text-outline: ${1:0} ${2:0} ${3:#000};"
+  },
+  "tov1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-overflow: ellipsis",
+    "body": "text-overflow: ellipsis;"
+  },
+  "tov2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-overflow: clip",
+    "body": "text-overflow: clip;"
+  },
+  "tr": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-replace:",
+    "body": "text-replace: ${0};"
+  },
+  "trf1": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: ",
+    "body": "transform: ${1};"
+  },
+  "trf2": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: skewX( angle)",
+    "body": "transform: skewX(${1:angle});"
+  },
+  "trf3": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: skewY( angle)",
+    "body": "transform: skewY(${1:angle});"
+  },
+  "trf4": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: scale( x, x)",
+    "body": "transform: scale(${1:x}, ${2:y});"
+  },
+  "trf5": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: scaleX( x)",
+    "body": "transform: scaleX(${1:x});"
+  },
+  "trf6": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: scaleY( y)",
+    "body": "transform: scaleY(${1:y});"
+  },
+  "trf7": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: scaleZ( z)",
+    "body": "transform: scaleZ(${1:z});"
+  },
+  "trf8": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: scale3d( x, x, x)",
+    "body": "transform: scale3d(${1:x}, ${2:y}, ${3:z});"
+  },
+  "trf9": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: rotate( angle)",
+    "body": "transform: rotate(${1:angle});"
+  },
+  "trf10": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: rotateX( angle)",
+    "body": "transform: rotateX(${1:angle});"
+  },
+  "trf11": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: rotateY( angle)",
+    "body": "transform: rotateY(${1:angle});"
+  },
+  "trf12": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: rotateZ( angle)",
+    "body": "transform: rotateZ(${1:angle});"
+  },
+  "trf13": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: translate( x, x)",
+    "body": "transform: translate(${1:x}, ${2:y});"
+  },
+  "trf14": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: translateX( x)",
+    "body": "transform: translateX(${1:x});"
+  },
+  "trf15": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: translateY( y)",
+    "body": "transform: translateY(${1:y});"
+  },
+  "trf16": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: translateZ( z)",
+    "body": "transform: translateZ(${1:z});"
+  },
+  "trf17": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform: translate3d( tx, tx, tx)",
+    "body": "transform: translate3d(${1:tx}, ${2:ty}, ${3:tz});"
+  },
+  "trfo": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform-origin:",
+    "body": "transform-origin: ${0};"
+  },
+  "trfs": {
+    "scope": "css,postcss,scss",
+    "prefix": "transform-style: preserve-3d",
+    "body": "transform-style: preserve-3d;"
+  },
+  "trs": {
+    "scope": "css,postcss,scss",
+    "prefix": "transition: prop prop",
+    "body": "transition: ${1:prop} ${2:time};"
+  },
+  "trsde": {
+    "scope": "css,postcss,scss",
+    "prefix": "transition-delay: time",
+    "body": "transition-delay: ${1:time};"
+  },
+  "trsdu": {
+    "scope": "css,postcss,scss",
+    "prefix": "transition-duration: time",
+    "body": "transition-duration: ${1:time};"
+  },
+  "trsp": {
+    "scope": "css,postcss,scss",
+    "prefix": "transition-property: prop",
+    "body": "transition-property: ${1:prop};"
+  },
+  "trstf": {
+    "scope": "css,postcss,scss",
+    "prefix": "transition-timing-function: fn",
+    "body": "transition-timing-function: ${1:fn};"
+  },
+  "tsh": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-shadow: hoff hoff hoff hoff",
+    "body": "text-shadow: ${1:hoff} ${2:voff} ${3:blur} ${4:#000};"
+  },
+  "tt1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-transform: uppercase",
+    "body": "text-transform: uppercase;"
+  },
+  "tt2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-transform: lowercase",
+    "body": "text-transform: lowercase;"
+  },
+  "tt3": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-transform: capitalize",
+    "body": "text-transform: capitalize;"
+  },
+  "tt4": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-transform: none",
+    "body": "text-transform: none;"
+  },
+  "tw1": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-wrap: none",
+    "body": "text-wrap: none;"
+  },
+  "tw2": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-wrap: normal",
+    "body": "text-wrap: normal;"
+  },
+  "tw3": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-wrap: unrestricted",
+    "body": "text-wrap: unrestricted;"
+  },
+  "tw4": {
+    "scope": "css,postcss,scss",
+    "prefix": "text-wrap: suppress",
+    "body": "text-wrap: suppress;"
+  },
+  "us": {
+    "scope": "css,postcss,scss",
+    "prefix": "user-select: none",
+    "body": "user-select: none;"
+  },
+  "v1": {
+    "scope": "css,postcss,scss",
+    "prefix": "visibility: hidden",
+    "body": "visibility: hidden;"
+  },
+  "v2": {
+    "scope": "css,postcss,scss",
+    "prefix": "visibility: visible",
+    "body": "visibility: visible;"
+  },
+  "v3": {
+    "scope": "css,postcss,scss",
+    "prefix": "visibility: collapse",
+    "body": "visibility: collapse;"
+  },
+  "va1": {
+    "scope": "css,postcss,scss",
+    "prefix": "vertical-align: top",
+    "body": "vertical-align: top;"
+  },
+  "va2": {
+    "scope": "css,postcss,scss",
+    "prefix": "vertical-align: super",
+    "body": "vertical-align: super;"
+  },
+  "va3": {
+    "scope": "css,postcss,scss",
+    "prefix": "vertical-align: text-top",
+    "body": "vertical-align: text-top;"
+  },
+  "va4": {
+    "scope": "css,postcss,scss",
+    "prefix": "vertical-align: middle",
+    "body": "vertical-align: middle;"
+  },
+  "va5": {
+    "scope": "css,postcss,scss",
+    "prefix": "vertical-align: baseline",
+    "body": "vertical-align: baseline;"
+  },
+  "va6": {
+    "scope": "css,postcss,scss",
+    "prefix": "vertical-align: bottom",
+    "body": "vertical-align: bottom;"
+  },
+  "va7": {
+    "scope": "css,postcss,scss",
+    "prefix": "vertical-align: text-bottom",
+    "body": "vertical-align: text-bottom;"
+  },
+  "va8": {
+    "scope": "css,postcss,scss",
+    "prefix": "vertical-align: sub",
+    "body": "vertical-align: sub;"
+  },
+  "w": {
+    "scope": "css,postcss,scss",
+    "prefix": "width:",
+    "body": "width: ${0};"
+  },
+  "whs1": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space: nowrap",
+    "body": "white-space: nowrap;"
+  },
+  "whs2": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space: pre",
+    "body": "white-space: pre;"
+  },
+  "whs3": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space: pre-wrap",
+    "body": "white-space: pre-wrap;"
+  },
+  "whs4": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space: pre-line",
+    "body": "white-space: pre-line;"
+  },
+  "whs5": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space: normal",
+    "body": "white-space: normal;"
+  },
+  "whsc1": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space-collapse: normal",
+    "body": "white-space-collapse: normal;"
+  },
+  "whsc2": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space-collapse: keep-all",
+    "body": "white-space-collapse: keep-all;"
+  },
+  "whsc3": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space-collapse: loose",
+    "body": "white-space-collapse: loose;"
+  },
+  "whsc4": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space-collapse: break-strict",
+    "body": "white-space-collapse: break-strict;"
+  },
+  "whsc5": {
+    "scope": "css,postcss,scss",
+    "prefix": "white-space-collapse: break-all",
+    "body": "white-space-collapse: break-all;"
+  },
+  "wid": {
+    "scope": "css,postcss,scss",
+    "prefix": "widows:",
+    "body": "widows: ${0};"
+  },
+  "wm1": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: lr-tb",
+    "body": "writing-mode: lr-tb;"
+  },
+  "wm2": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: lr-tb",
+    "body": "writing-mode: lr-tb;"
+  },
+  "wm3": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: lr-bt",
+    "body": "writing-mode: lr-bt;"
+  },
+  "wm4": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: rl-tb",
+    "body": "writing-mode: rl-tb;"
+  },
+  "wm5": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: rl-bt",
+    "body": "writing-mode: rl-bt;"
+  },
+  "wm6": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: tb-rl",
+    "body": "writing-mode: tb-rl;"
+  },
+  "wm7": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: tb-lr",
+    "body": "writing-mode: tb-lr;"
+  },
+  "wm8": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: bt-lr",
+    "body": "writing-mode: bt-lr;"
+  },
+  "wm9": {
+    "scope": "css,postcss,scss",
+    "prefix": "writing-mode: bt-rl",
+    "body": "writing-mode: bt-rl;"
+  },
+  "wob1": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-break: normal",
+    "body": "word-break: normal;"
+  },
+  "wob2": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-break: keep-all",
+    "body": "word-break: keep-all;"
+  },
+  "wob3": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-break: break-all",
+    "body": "word-break: break-all;"
+  },
+  "wos": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-spacing:",
+    "body": "word-spacing: ${0};"
+  },
+  "wow1": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-wrap: none",
+    "body": "word-wrap: none;"
+  },
+  "wow2": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-wrap: unrestricted",
+    "body": "word-wrap: unrestricted;"
+  },
+  "wow3": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-wrap: suppress",
+    "body": "word-wrap: suppress;"
+  },
+  "wow4": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-wrap: break-word",
+    "body": "word-wrap: break-word;"
+  },
+  "wow5": {
+    "scope": "css,postcss,scss",
+    "prefix": "word-wrap: normal",
+    "body": "word-wrap: normal;"
+  },
+  "z": {
+    "scope": "css,postcss,scss",
+    "prefix": "z-index:",
+    "body": "z-index: ${0};"
+  },
+  "zom": {"scope": "css,postcss,scss", "prefix": "zoom: 1", "body": "zoom: 1;"}
+}
