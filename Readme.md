@@ -7,7 +7,7 @@
 
 **_Use This Project As Your Starting Point For Any React Projects._**
 
-### Features
+## Features
 
 1. React 17+
 2. Webpack 5 + _React-refresh HMR_
@@ -29,11 +29,25 @@
 
 **Assets in js**
 
-- Assets in `./src` - add using `import Logo as "./logo.png";` & `<img src="{Logo}" />`
-- Assets in `./public` - add using `<img src="logo.png" />`
+1. Assets in `./src`
+2. Assets in `./public`
+
+```jsx
+// src/components/App.js
+import Logo as "./logo.png";
+
+let App = () => {
+  return (
+    <div>
+      <img src="{Logo}" />
+      <img src="images/publiclogo.png" />
+    </div>
+  );
+```
 
 **Assets in css `url()`**
-All assets are `resolved` by Webpack except urls which **`url.startsWith('/')`** which will point to root directory.
+
+All assets are `resolved` by Webpack except for **`url.startsWith('/')`** which will point to root directory.
 
 - In _development_ root is `['./dist', './public']`
 - In _production_ root is `./dist`
@@ -45,7 +59,7 @@ url(/images/foo.png) --->  "./public/images/foo.png" // development
 url(/images/foo.png) --->  "./dist/images/foo.png" // production
 ```
 
-### Install
+## Install
 
 ```bash
 # Clone this repo
@@ -54,7 +68,7 @@ npm run dev   # development - uses webpack.dev.js
 npm run prod  # production - uses webpack.prod.js
 ```
 
-### Stylelint
+## Stylelint
 
 `.stylelintrc.json`
 
@@ -63,7 +77,7 @@ npm run prod  # production - uses webpack.prod.js
 - Is extended from predefined configs - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) & [stylelint-config-rational-order](https://github.com/constverum/stylelint-config-rational-order)
 
 ```bash
-# Already installed
+# Already added in package.json
 npm i -D  stylelint stylelint-config-standard
 npm i -D  stylelint-order stylelint-config-rational-order postcss-sorting
 ```
@@ -74,14 +88,14 @@ npm i -D  stylelint-order stylelint-config-rational-order postcss-sorting
   "prettier.stylelintIntegration": true,
 ```
 
-### Visual studio code
+## Visual studio code
 
-_This Project comes with some minor tweaks & recommendations for better developer experience_.
+_This Project comes with some minor tweaks & recommendations for better developer experience. You are free to disable_.
 
 - Check **`.vscode/settings.json`**
 - Custom **Css Snippets** support is added for `postcss`. I had issues with Emmet in vscode.
 
-### Add Tailwindcss (optional)
+## Add Tailwindcss (optional)
 
 **_Vscode extensions (optional)_**
 
