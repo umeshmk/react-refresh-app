@@ -127,11 +127,11 @@ plugins: [
 
 ```js
 script:{
-  "build:css": "cross-env NODE_ENV=tailwindcss postcss src/style/_tailwind.css -o src/style/tailwind.css ",
+  "build:css": "cross-env NODE_ENV=tailwindcss postcss src/styles/_tailwind.css -o src/styles/tailwind.css ",
 }
 ```
 
-**_Create `./src/style/_tailwind.css`_**
+**_Create `./src/styles/_tailwind.css`_**
 
 ```css
 @tailwind base;
@@ -139,12 +139,11 @@ script:{
 @tailwind utilities;
 ```
 
-**_index.js_**
+**_index.css_**
 
-```js
-// import './styles/sanitize.css';  // remove this if using @tailwind base
-import './style/tailwind.css';
-import './index.css';
+```scss
+@import 'styles/sanitize.css';  // remove this if using @tailwind base
+@import 'styles/tailwind.css';
 ```
 
 - Run script - `npm run build:css`
