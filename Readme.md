@@ -111,7 +111,8 @@ npx tailwindcss init --full
 
 **_postcss.config.js_**
 
-- If using `postcss-preset-env` refer this [issue](https://github.com/tailwindlabs/tailwindcss/discussions/2462#discussioncomment-86591) for error solution.
+- Add to postcss.
+- If you get this [issue](https://github.com/tailwindlabs/tailwindcss/discussions/2462#discussioncomment-86591)
 
 ```js
 const tailwindcss = require('tailwindcss')('./tailwind.config.js');
@@ -123,8 +124,6 @@ plugins: [
 ```
 
 **_package.json_**
-
-- Run script - `npm run build:css`
 
 ```js
 script:{
@@ -145,8 +144,10 @@ script:{
 ```js
 // import './styles/sanitize.css';  // remove this if using @tailwind base
 import './style/tailwind.css';
-import './index.scss';
+import './index.css';
 ```
+
+- Run script - `npm run build:css`
 
 ## Issues
 
