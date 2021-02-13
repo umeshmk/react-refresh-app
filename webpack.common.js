@@ -32,7 +32,10 @@ module.exports = {
             options: {
               cacheDirectory: true,
               presets: ['@babel/preset-env', '@babel/preset-react'],
-              plugins: isProduction ? [] : ['react-refresh/babel'],
+              plugins: [
+                ...(isProduction ? [] : ['react-refresh/babel']),
+                'babel-plugin-styled-components',
+              ],
             },
           },
         ],
