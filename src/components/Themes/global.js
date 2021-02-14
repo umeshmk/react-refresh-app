@@ -1,7 +1,7 @@
 let theme = {
   color: {
     primary: 'cyan',
-    secondary: 'red',
+    secondary: '#987',
   },
 };
 
