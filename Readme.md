@@ -7,6 +7,8 @@
 
 **_Use This Project As Your Starting Point For Any React Projects._**
 
+For Styled-Components refer [styled-components](https://github.com/umeshmk/react-refresh-app/tree/styled-components) branch
+
 ## Features
 
 1. React 17+
@@ -142,7 +144,7 @@ script:{
 **_index.css_**
 
 ```scss
-@import 'styles/sanitize.css';  // remove this if using @tailwind base
+@import 'styles/sanitize.css'; // remove this if using @tailwind base
 @import 'styles/tailwind.css';
 ```
 
