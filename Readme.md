@@ -28,6 +28,7 @@ For Styled-Components refer [styled-components](https://github.com/umeshmk/react
    - `src/components/*.css` - _Scoped classes_.
 3. Assets in `./public` folder are copied to `./dist`
 4. `./public/index.html` - _Scripts/Stylesheets are automatically added._
+5. Code-splitting using `React.lazy()`
 
 **Assets in js**
 
