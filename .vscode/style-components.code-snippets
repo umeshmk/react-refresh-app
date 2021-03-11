@@ -1,0 +1,9 @@
+// background-color: ${(props) => props.theme.color.primary};;
+
+{
+  "${": {
+    "scope": "css",
+    "prefix": "${()=>props.theme}",
+    "body": "${(props) => props.theme.${1}}"
+  }
+}
